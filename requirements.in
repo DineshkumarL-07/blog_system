@@ -1,0 +1,10 @@
+django
+psycopg2-binary
+mozilla-django-oidc>=3.0
+celery>=5.3
+python-decouple>=3.8
+redis>=4.6
+django-redis>=5.3
+pre-commit
+pytest
+python-dotenv
