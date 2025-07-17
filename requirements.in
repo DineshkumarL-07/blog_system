@@ -8,3 +8,5 @@ django-redis>=5.3
 pre-commit
 pytest
 python-dotenv
+djangorestframework
+drf-yasg

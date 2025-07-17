@@ -16,4 +16,10 @@ For create the django project
 Command:
     django-admin startproject project_name
 
+For the requirements
+Added the module/package into the requirements.in
+after run these following command
+    pip-compile
+    pip-sync
+
 
