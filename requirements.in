@@ -9,4 +9,6 @@ pre-commit
 pytest
 python-dotenv
 djangorestframework
+djangorestframework-simplejwt
+python-jose
 drf-yasg
