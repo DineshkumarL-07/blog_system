@@ -16,8 +16,16 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework import permissions, routers
+from blog_system.swagger import schema_view
+
+BASE_URL = 'blog/'
+router = routers.DefaultRouter()
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path(f'{BASE_URL}admin/', admin.site.urls),
+    path(f'{BASE_URL}', include(router.urls)),  # Your API endpoints
+    path(f'{BASE_URL}swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path(f'{BASE_URL}redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]
